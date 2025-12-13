@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #23242a;
+}
+
+.form-box {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    padding: 50px;
+    background: #833e7b;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+h2, h1 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+p {
+    margin: 15px 0; 
+    text-align: center; 
+    display: block;
+    color: #fff;
+    font-size: 0.9em;
+    width: 100%; 
+}
+
+p a {
+    color: #45f3ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+
+input {
+}
+
+.inputbox {
+    position: relative;
+    width: 100%; 
+    margin-bottom: 35px; 
+}
+  
+.inputbox input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    color: #fff;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+  
+.inputbox span {
+    position: absolute;
+    left: 0;
+    padding: 20px 10px 10px;
+    font-size: 1em;
+    color: #8f8f8f;
+    letter-spacing: 00.05em;
+    transition: 0.5s;
+    pointer-events: none;
+}
+  
+.inputbox input:valid ~span,
+.inputbox input:focus ~span {
+    color: #45f3ff;
+    transform: translateX(-10px) translateY(-34px);
+    font-size: 0,75em;
+}
+  
+.inputbox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #45f3ff;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 9;
+}
+  
+.inputbox input:valid ~i,
+.inputbox input:focus ~i {
+    height: 44px;
+}
+
+
+button {
+    border: none;
+    border-radius: 6px;
+    display: block;
+    position: relative;
+    padding: 0.7em 2.4em;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    color: royalblue;
+    z-index: 1;
+    transition: 0.5s;
+    font-family: inherit;
+    font-weight: 500;
+  }
+  
+  button span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+    border: 4px solid royalblue;
+  }
+  
+  button span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8%;
+    height: 500%;
+    background: var(--lightgray);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-60deg);
+    transition: all 0.3s;
+  }
+  
+  button:hover span::before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 100%;
+    background: royalblue;
+  }
+  
+  button:hover {
+    color: white;
+    box-shadow: 0 0 10px #45f3ff;
+  }
+
+
+
+.schedule-table {
+    width: 100%;
+    color: white;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    font-size: 0.9em;
+}
+
+.schedule-table thead tr {
+    background: #a96f9f;
+}
+
+.schedule-table th {
+    padding: 10px 8px;
+    border: 1px solid #45f3ff; 
+    text-align: left;
+}
+
+.schedule-table td {
+    padding: 8px;
+    border: 1px solid #555;
+}
+
+.dashboard-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
